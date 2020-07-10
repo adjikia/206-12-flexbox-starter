@@ -109,17 +109,35 @@ body {
   color: #fff;
 }
 
-header,
+header {
+  background-color: #ffb300;
+  height: 180px;
+  width: 100%;
+}
+
+
 footer {
-  background-color: #222;
+  background-color: #ffb300;
   height: 80px;
   width: 100%;
+  margin-top:5%;
+}
+
+footer img {
+height:35px;
+width:auto;
+}
+
+footer li {
+  display: inline;
+  padding:3px;
 }
 
 main {
   background-color: #ccc;
-  height: 250px;
+  height: auto;
   width: 100%;
+  padding: 0px 40px;
 }
 
 header,
@@ -130,21 +148,25 @@ main {
   align-items: center;
 }
 
-.flex-container {
+.flex-container, .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   justify-content:space-between;
+  max-width:1200px;
+}
+
+.wrapper {
+  padding:0px 4%;
 }
 
 .flex-items {
-  color: #fff;
+  color: #000000;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
+  font-size: 0.75em;
   width: 30%;
-  height: 200px;
+  height: auto;
 }
 
 /* ==========================================================================
@@ -227,17 +249,18 @@ main {
    Modify as content requires.
    ========================================================================== */
 
-/* If you'd like to try a different layout on Desktop and larger screens: */
-@media (min-width: 1200px) {
-  #div-1,
-  #div-2{
-      /* set your flex value to 1 50% */
+@media (min-width: 768px;){
+
+  .flex-container, .wrapper {
+    display: inline;
   }
 
-  #div-3 {
-    /* set your flex value to 1 100% */
-  }
+
 }
+
+
+/* If you'd like to try a different layout on Desktop and larger screens: */
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
